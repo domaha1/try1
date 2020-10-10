@@ -1,0 +1,79 @@
+<div class="fixed-top">
+    
+    <div class="collapse" id="navbarToggleExternalContent">
+        
+        <div class="bg-dark p-4">
+            
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h2 id="topic">اعرف راتبك التقاعدي</h2>
+    </nav>
+</div>
+
+<div class="card-deck ">
+    <div class="card">
+
+        <div class="card-body right_side">
+            {{#if Pics}}
+            <img src="{{Pics}}" class="card-img-top" alt="...">
+            {{/if}}
+
+            {{#if Pics1}}
+            <img src="{{Pics1}}" class="card-img-top" alt="...">
+            {{/if}}
+
+            {{#if Pics3}}
+            <img src="{{Pics3}}" class="card-img-top" alt="...">
+            {{/if}}
+
+            {{#if Pics2}}
+            <img src="{{Pics2}}" class="card-img-top" alt="...">
+            {{/if}}
+
+        </div>
+    </div>
+    <div class="card">
+        <img src="../images/pension.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <form action="/" method="post">
+                <div class="row">
+                    <div class="col">
+                        <input type="number" class="form-control" placeholder="أدخل سنوات الخدمة" name="years_service">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" placeholder="أدخل الراتب الاساسي" name="pension">
+                    </div>
+                </div>
+                <br>
+                <h5 id="tq" align="center">
+                    راتبك التقاعدي هو :&emsp;{{Result}}
+                </h5> <br>
+                <button type="submit" class="btn btn-primary">احسبها</button>
+            </form>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="card-body  left_side">
+            <div>
+                <br>
+                <br>
+
+
+
+                {{message}}
+                <br>
+                <br>
+                <br>
+                {{messag}}
+            </div>
+        </div>
+    </div>
+</div>
